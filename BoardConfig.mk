@@ -81,7 +81,7 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
@@ -160,10 +160,10 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab_AB.qcom
@@ -214,12 +214,12 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    $(DEVICE_PATH)/device_framework_matrix.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
+    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
+ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
