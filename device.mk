@@ -47,7 +47,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     AliothFrameworks \
     AliothSystemUI \
-    AliothSettings 
+    AliothSettings \
+    SettingsOverlayM2012K11AG \
+    SettingsOverlayM2012K11AI
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
