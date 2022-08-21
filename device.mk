@@ -187,7 +187,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.
+    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/displayconfig/display_id_4630946736638489729.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946736638489729.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -491,6 +494,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+# VPP tunings
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/tunings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/tunings.txt
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
