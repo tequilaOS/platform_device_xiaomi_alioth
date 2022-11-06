@@ -162,6 +162,10 @@ TARGET_USES_MIUI_DOLBY := true
 
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 # Miui Dolby Engine Topic
+# Dolby Config File
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dolby/config/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
 # Dolby Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/dolby
 
