@@ -18,7 +18,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/alioth-miuicamera/products/miuic
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-tequila
 
 PRODUCT_PACKAGES += \
     SettingsProviderM2012K11AC \
@@ -58,21 +58,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Gcam
-$(call inherit-product-if-exists, vendor/GcamBSG/GcamBSG-vendor.mk)
-
-# Lawnchair Launcher
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
-# MatlogX
-ifeq ($(TARGET_WITH_MATLOGX),true)
-PRODUCT_PACKAGES += \
-     MatlogX
-endif
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
