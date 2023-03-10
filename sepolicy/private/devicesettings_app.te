@@ -1,5 +1,3 @@
-app_domain(devicesettings_app)
-
 # Allow devicesettings_app to find *_service
 allow devicesettings_app {
   app_api_service
@@ -25,7 +23,6 @@ allow devicesettings_app {
   cgroup
   sysfs_leds
   sysfs_thermal
-  sysfs_htsr
 }:{ file lnk_file } rw_file_perms;
 
 # Allow DeviceSettings to get settingsdebug.instant.packages prop

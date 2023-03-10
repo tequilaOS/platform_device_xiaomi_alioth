@@ -10,6 +10,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Poco Parts
+$(call inherit-product-if-exists, vendor/PocoParts/pocoparts.mk)
+
 # A/B
 TARGET_IS_VAB := true
 
@@ -159,10 +162,6 @@ PRODUCT_PACKAGES += \
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Dolby Support
 TARGET_USES_MIUI_DOLBY := true
