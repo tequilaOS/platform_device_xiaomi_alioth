@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Dolby Support
-TARGET_USES_MIUI_DOLBY := true
+TARGET_USES_MIUI_DOLBY := false
 
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 # Miui Dolby Engine Topic
@@ -194,6 +194,10 @@ else
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.misound.disable=false \
     ro.vendor.audio.misound.bluetooth.enable=true
+
+PRODUCT_PACKAGES =- \
+    DaxUI \
+    daxService
 endif
 
 
