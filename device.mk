@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Dolby Support
-TARGET_USES_MIUI_DOLBY := true
+TARGET_USES_MIUI_DOLBY := false
 
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 # Miui Dolby Engine Topic
