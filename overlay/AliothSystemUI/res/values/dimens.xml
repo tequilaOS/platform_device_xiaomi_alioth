@@ -20,6 +20,9 @@
          navigation_extra_key_width -->
     <dimen name="navigation_side_padding">80px</dimen>
     
+     <!-- for 20dp of padding at 2.75px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">55px</dimen>
+
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">4dp</dimen>
 
