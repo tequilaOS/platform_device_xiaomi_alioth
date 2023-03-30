@@ -163,6 +163,9 @@ PRODUCT_PACKAGES += \
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
+# Miuicamera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/products/miuicamera.mk)
+
 # Dolby Support
 TARGET_USES_MIUI_DOLBY := true
 
