@@ -109,7 +109,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-TARGET_KERNEL_CONFIG += alioth_defconfig
+TARGET_KERNEL_CONFIG += vendor/alioth_defconfig
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
